@@ -10,8 +10,8 @@ import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 
-public class StoneAgeArrow extends ArrowItem {
-    public StoneAgeArrow(Item.Properties properties) {
+public class IndustrialAgeArrow extends ArrowItem {
+    public IndustrialAgeArrow(Item.Properties properties) {
         super(properties);
     }
 
@@ -19,7 +19,7 @@ public class StoneAgeArrow extends ArrowItem {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
                                 TooltipFlag tooltipFlag) {
         tooltipComponents.add(
-                Component.translatable("tooltip.flieslikeanarrow.stone_age_arrow.tooltip")
+                Component.translatable("tooltip.flieslikeanarrow.industrial_age_arrow.tooltip")
                         .setStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }

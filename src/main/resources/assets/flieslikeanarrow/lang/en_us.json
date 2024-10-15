@@ -1,3 +1,4 @@
 {
-  "item.flieslikeanarrow.stone_age_arrow": "Stone Age Arrow"
+  "item.flieslikeanarrow.stone_age_arrow": "Stone Age Arrow",
+  "tooltip.flieslikeanarrow.stone_age_arrow.tooltip": "Isn't this just a regular arrow?"
 }

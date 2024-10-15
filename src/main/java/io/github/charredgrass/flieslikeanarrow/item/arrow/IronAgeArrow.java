@@ -3,15 +3,12 @@ package io.github.charredgrass.flieslikeanarrow.item.arrow;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.world.item.ArrowItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 
 import java.util.List;
 
-public class StoneAgeArrow extends ArrowItem {
-    public StoneAgeArrow(Item.Properties properties) {
+public class IronAgeArrow extends ArrowItem {
+    public IronAgeArrow(Item.Properties properties) {
         super(properties);
     }
 
@@ -19,7 +16,7 @@ public class StoneAgeArrow extends ArrowItem {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
                                 TooltipFlag tooltipFlag) {
         tooltipComponents.add(
-                Component.translatable("tooltip.flieslikeanarrow.stone_age_arrow.tooltip")
+                Component.translatable("tooltip.flieslikeanarrow.iron_age_arrow.tooltip")
                         .setStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }

@@ -10,16 +10,15 @@ import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 
-public class StoneAgeArrow extends ArrowItem {
-    public StoneAgeArrow(Item.Properties properties) {
+public class InformationAgeArrow extends ArrowItem {
+    public InformationAgeArrow(Item.Properties properties) {
         super(properties);
     }
 
-    @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
                                 TooltipFlag tooltipFlag) {
         tooltipComponents.add(
-                Component.translatable("tooltip.flieslikeanarrow.stone_age_arrow.tooltip")
+                Component.translatable("tooltip.flieslikeanarrow.information_age_arrow.tooltip")
                         .setStyle(Style.EMPTY.withColor(ChatFormatting.GRAY)));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }

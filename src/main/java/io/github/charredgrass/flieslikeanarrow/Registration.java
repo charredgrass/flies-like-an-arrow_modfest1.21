@@ -1,5 +1,8 @@
 package io.github.charredgrass.flieslikeanarrow;
 
+import io.github.charredgrass.flieslikeanarrow.item.arrow.IndustrialAgeArrow;
+import io.github.charredgrass.flieslikeanarrow.item.arrow.InformationAgeArrow;
+import io.github.charredgrass.flieslikeanarrow.item.arrow.IronAgeArrow;
 import io.github.charredgrass.flieslikeanarrow.item.arrow.StoneAgeArrow;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -19,9 +22,12 @@ public class Registration {
 //    public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.registerSimpleItem("stone_age_arrow");
     public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.register("stone_age_arrow",
         () -> new StoneAgeArrow(new Item.Properties()));
-    public static final DeferredItem<Item> IRON_AGE_ARROW = ITEMS.registerSimpleItem("iron_age_arrow");
-    public static final DeferredItem<Item> INDUSTRIAL_AGE_ARROW = ITEMS.registerSimpleItem("industrial_age_arrow");
-    public static final DeferredItem<Item> INFORMATION_AGE_ARROW = ITEMS.registerSimpleItem("information_age_arrow");
+    public static final DeferredItem<Item> IRON_AGE_ARROW = ITEMS.register("iron_age_arrow",
+            () -> new IronAgeArrow(new Item.Properties()));
+    public static final DeferredItem<Item> INDUSTRIAL_AGE_ARROW = ITEMS.register("industrial_age_arrow",
+            () -> new IndustrialAgeArrow(new Item.Properties()));
+    public static final DeferredItem<Item> INFORMATION_AGE_ARROW = ITEMS.register("information_age_arrow",
+            () -> new InformationAgeArrow(new Item.Properties()));
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FliesLikeAnArrow.MODID);
@@ -31,7 +37,10 @@ public class Registration {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> STONE_AGE_ARROW.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(STONE_AGE_ARROW.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(STONE_AGE_ARROW.get()); //For your own tabs, this method is preferred over the event
+                output.accept(IRON_AGE_ARROW.get());
+                output.accept(INDUSTRIAL_AGE_ARROW.get());
+                output.accept(INFORMATION_AGE_ARROW.get());
             }).build());
 
     public static void init(IEventBus modEventBus) {
