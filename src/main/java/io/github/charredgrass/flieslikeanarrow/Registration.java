@@ -16,6 +16,9 @@ public class Registration {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FliesLikeAnArrow.MODID);
 
     public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.registerSimpleItem("stone_age_arrow");
+    public static final DeferredItem<Item> IRON_AGE_ARROW = ITEMS.registerSimpleItem("iron_age_arrow");
+    public static final DeferredItem<Item> INDUSTRIAL_AGE_ARROW = ITEMS.registerSimpleItem("industrial_age_arrow");
+    public static final DeferredItem<Item> INFORMATION_AGE_ARROW = ITEMS.registerSimpleItem("information_age_arrow");
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FliesLikeAnArrow.MODID);
@@ -39,7 +42,8 @@ public class Registration {
     static void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(STONE_AGE_ARROW);
+//            event.accept(STONE_AGE_ARROW);
+
         }
 
     }
