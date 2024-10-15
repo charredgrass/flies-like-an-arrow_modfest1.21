@@ -1,5 +1,6 @@
 package io.github.charredgrass.flieslikeanarrow;
 
+import io.github.charredgrass.flieslikeanarrow.item.arrow.StoneAgeArrow;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,7 +16,9 @@ public class Registration {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FliesLikeAnArrow.MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FliesLikeAnArrow.MODID);
 
-    public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.registerSimpleItem("stone_age_arrow");
+//    public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.registerSimpleItem("stone_age_arrow");
+    public static final DeferredItem<Item> STONE_AGE_ARROW = ITEMS.register("stone_age_arrow",
+        () -> new StoneAgeArrow(new Item.Properties()));
     public static final DeferredItem<Item> IRON_AGE_ARROW = ITEMS.registerSimpleItem("iron_age_arrow");
     public static final DeferredItem<Item> INDUSTRIAL_AGE_ARROW = ITEMS.registerSimpleItem("industrial_age_arrow");
     public static final DeferredItem<Item> INFORMATION_AGE_ARROW = ITEMS.registerSimpleItem("information_age_arrow");
